@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import { fileToBase64, fileToText } from './utils/file';
 import { analyzeDesign } from './services/geminiService';
@@ -51,10 +50,10 @@ const App: React.FC = () => {
   }, [canAnalyze, cadPdfFile, faultsJsonFile, chromaDbFile]);
   
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+    <div className="min-h-screen text-gray-900 dark:text-gray-100 font-sans">
       <Header />
       <main className="container mx-auto p-4 md:p-8">
-        <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 shadow-2xl rounded-2xl overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-2xl rounded-2xl overflow-hidden">
           <div className="p-6 md:p-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <FileUpload
@@ -117,7 +116,7 @@ const App: React.FC = () => {
             )}
 
             {!isLoading && !report && !error && (
-              <div className="text-center p-8 bg-gray-50 dark:bg-gray-800/50 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-600">
+              <div className="text-center p-8 bg-gray-50/50 dark:bg-gray-800/50 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-600">
                 <LightBulbIcon className="w-16 h-16 mx-auto text-gray-400 dark:text-gray-500 mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">Ready for Analysis</h3>
                 <p className="text-gray-500 dark:text-gray-400 mt-2">Upload all three required files and click the "Generate" button to start the AI inspection process.</p>

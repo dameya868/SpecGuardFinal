@@ -1,5 +1,5 @@
 {
-  "name": "Sheet Metal Design AI Inspector",
-  "description": "An AI-powered application that analyzes sheet metal CAD drawings (PDFs) against design rules and known manufacturing faults. Users upload a design rule database, a JSON file of common faults, and a CAD drawing PDF. The app uses Gemini to inspect the drawing, identify potential violations, and generate a detailed inspection report.",
+  "name": "SpecGuard",
+  "description": "An AI-powered application for automated CAD design review and compliance checking for sheet metal manufacturing. It analyzes CAD drawings (PDFs) against design rules and known manufacturing faults to generate detailed inspection reports.",
   "requestFramePermissions": []
 }
